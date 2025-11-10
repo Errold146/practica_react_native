@@ -4,7 +4,7 @@ import { FlatList, Text, View } from 'react-native'
 
 export default function ProductScreen() {
     return (
-        <View className='flex flex-1 px-4 mb-20'>
+        <View className='flex flex-1 px-4 mb-7'>
             <FlatList 
                 data={products}
                 keyExtractor={item => item.id}
@@ -17,7 +17,7 @@ export default function ProductScreen() {
                             <Text className='font-work-black'>{item.price}</Text>
                             <Link
                                 href={{
-                                    pathname: "/(stack)/products/[id]",
+                                    pathname: "/(drawer)/(tabs)/(stack)/products/[id]",
                                     params: { id: item.id }
                                 }}
                                 className='text-verde-600 font-work-medium'
